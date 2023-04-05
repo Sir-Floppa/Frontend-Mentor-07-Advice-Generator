@@ -1,16 +1,25 @@
+@mixin flex($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
 :host {
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex(row, center, center);
 }
 
 main {
+  @include flex(column, center, space-evenly);
   background-color: hsl(218, 20%, 24%);
+  gap: 1rem;
   text-align: center;
   width: 35%;
-  padding: 2rem;
+  height: 25rem;
+  padding: 2rem 3rem 0;
   border-radius: 1.5rem;
+  filter: drop-shadow(0 0 2rem rgba(0, 0, 0, 0.25));
 
   p {
     color: hsl(193, 38%, 86%);
@@ -22,6 +31,40 @@ main {
     color: hsl(150, 100%, 66%);
     font-size: 1rem;
     text-transform: uppercase;
+    letter-spacing: .25rem;
     font-weight: 400;
+  }
+
+  img {
+    margin-bottom: 3rem;
+  }
+
+  #advice-btn {
+    @include flex(row, center, center);
+    width: min-content;
+    background-color: hsl(150, 100%, 66%);
+    border-radius: 50%; 
+    width: 4rem;
+    height: 4rem;
+    outline: none;
+    border: none;
+    transition: filter 400ms;
+    position: absolute;
+    bottom: -2rem;
+
+    img {
+      margin: 0;
+    }
+
+    &:hover {
+      filter: drop-shadow(0 0 1rem hsl(150, 100%, 66%));
+      transition: filter 400ms;
+    }
+
+    &:active {
+      img {
+        scale: 110%;
+      }
+    }
   }
 }
