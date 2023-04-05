@@ -1,0 +1,27 @@
+:host {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: hsl(218, 20%, 24%);
+  text-align: center;
+  width: 35%;
+  padding: 2rem;
+  border-radius: 1.5rem;
+
+  p {
+    color: hsl(193, 38%, 86%);
+    font-weight: 800;
+    font-size: 1.75rem;
+  }
+
+  h1 {
+    color: hsl(150, 100%, 66%);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+}
