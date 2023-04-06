@@ -1,15 +1,15 @@
 <main>
   <h1>
-    Advice #117
+    Advice #{{ advice.id }}
   </h1>
 
   <p>
-    "It is easy to sit up and take notice, what's difficult is getting up and taking action."
+    "{{ advice.advice }}"
   </p>
 
   <img src="assets/images/pattern-divider-desktop.svg" alt="">
 
-  <button id="advice-btn">
+  <button id="advice-btn" (click)="getAdvice()">
     <img src="assets/images/icon-dice.svg" alt="">
   </button>
 </main>
