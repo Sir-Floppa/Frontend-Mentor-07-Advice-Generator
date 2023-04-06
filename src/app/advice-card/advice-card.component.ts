@@ -24,5 +24,9 @@ export class AdviceCardComponent implements OnInit {
     this.apiService.get.subscribe((res: ApiResponse) => {
       this.advice = res.slip;
     });
+
+    const btn = <HTMLButtonElement>document.querySelector('#advice-btn');
+    btn.disabled = true;
+    setTimeout(() => btn.disabled = false, 2000);
   }
 }

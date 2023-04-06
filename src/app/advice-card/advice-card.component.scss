@@ -66,5 +66,10 @@ main {
         scale: 110%;
       }
     }
+
+    &:disabled {
+      opacity: .75;
+      filter: none;
+    }
   }
 }
