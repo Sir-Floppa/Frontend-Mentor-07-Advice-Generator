@@ -49,6 +49,7 @@ main {
     outline: none;
     border: none;
     transition: filter 400ms;
+    transition: opacity 400ms;
     position: absolute;
     bottom: -2rem;
 
@@ -69,6 +70,7 @@ main {
 
     &:disabled {
       opacity: .75;
+      transition: opacity 400ms;
       filter: none;
     }
   }
