@@ -37,6 +37,7 @@ main {
 
   img {
     margin-bottom: 3rem;
+    width: 100%;
   }
 
   #advice-btn {
@@ -48,13 +49,13 @@ main {
     height: 4rem;
     outline: none;
     border: none;
-    transition: filter 400ms;
-    transition: opacity 400ms;
+    transition: filter 400ms, opacity 400ms;
     position: absolute;
     bottom: -2rem;
 
     img {
       margin: 0;
+      width: auto;
     }
 
     &:hover {
@@ -73,5 +74,35 @@ main {
       transition: opacity 400ms;
       filter: none;
     }
+  }
+
+  #desktop-divider {
+    display: block;
+  }
+
+  #mobile-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  main {
+    width: 90%;
+
+    h1 {
+      font-size: .75rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
+  #desktop-divider {
+    display: none;
+  }
+  
+  #mobile-divider {
+    display: block;
   }
 }
